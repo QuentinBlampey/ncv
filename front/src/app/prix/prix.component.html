@@ -1,0 +1,12 @@
+<div class="bloc">
+    <div class="logos">
+        <img *ngFor="let logo of logos" [src]="logo" alt="logo_evenement"/>
+    </div>
+    <div class="prix">
+        <h1> {{ prix }} </h1>
+        <p> € </p>
+    </div>
+    <ul>
+        <li *ngFor="let offre of offres"> <img src="../../assets/images/validation.png" alt="validation"/> {{ offre }} </li>
+    </ul>
+</div>

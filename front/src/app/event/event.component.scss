@@ -1,0 +1,145 @@
+@import "../../variables.scss";
+
+.bloc-event {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.bloc-pres {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bloc-texte {
+  width: 650px;
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+    font-size: 9vh;
+}
+
+h2 {
+    font-size: 43px;
+    align-self: flex-start;
+}
+
+h3 {
+  font-size: 23px;
+  font-family: 'GothamLight';
+}
+
+p {
+  font-family: 'GothamThin' , 'Verdana';
+}
+
+h3 , .description {
+  color: $gris_fonce;
+}
+
+.logo-event {
+  width: 330px;
+  height: 100%;
+  margin: 0px 15px; 
+}
+
+@media screen and (max-width: 1023px) {
+  .bloc-pres {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .bloc-texte {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 675px) {
+  .logo-event {
+     width: 250px;
+     height: 100%;
+     margin: 0px 15px; 
+  }
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 24px;
+        align-self: center;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .bloc-texte {
+        text-align: center;
+    }
+
+    .boutons {
+        flex-direction: column;
+        & a {
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%,0%);
+        } 
+    }
+}
+
+.boutons {
+    display: flex;
+    & :first-child {
+        margin-right: 20px;
+    }
+}
+
+
+
+
+.hero-section {
+  background-size: cover;
+  height: 80vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+    & img {
+        position: absolute;
+	    top:0;
+	    margin: auto;
+    }
+}
+
+.hero-section-text {
+  color: $blanc;
+  font-family: 'GothamLight';
+}
+
+.triangle {
+    width: 40px;
+    height: 40px;
+    background: $couleur_fond;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -20px;
+    display: block;
+    margin: auto;
+}

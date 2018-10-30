@@ -1,0 +1,21 @@
+<app-banniere-titre [titre]="'Classements'"></app-banniere-titre>
+
+<app-choix-edition (pressedButton)= "filtreschange($event)"></app-choix-edition>
+
+<table>
+  <thead>
+    <tr>
+      <th width="100">Rang</th>
+      <th>Nom</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+        *ngFor="let classement of sortedClassements | sort : 'rang'">
+      <td>{{classement.rang}}</td>
+      <td>{{classement.nom}} {{classement.prenom}}</td>
+      <td class="finaliste"> {{ getFinalistes(classement)}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,90 @@
+@import "../../variables.scss";
+
+* {box-sizing: border-box}
+body {margin:0}
+.mySlides {display: block}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  height: 30vw;
+  max-height: 50vh;
+  min-height: 150px;
+  overflow: hidden;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.slideshow-container img {
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.post {
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.bloc-texte {
+    padding: 25px;
+}
+
+.bloc-texte h1 {
+    margin: 5px 0px;
+    color: $bleu_header;
+}
+
+.bloc-texte h3 {
+    color: $bleu;
+    font-family: "GothamBook";
+    margin-bottom: 20px;
+}
+
+.bloc-texte p {
+    color: $gris_fonce;
+    font-family: "GothamBook";
+    text-align: justify;
+}
+
+.post .video {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+    
+    & video {
+        margin: 15px;
+        padding: 0px;
+        width: 40%;
+        height: 100%;
+        min-width: 150px;
+    }
+    
+}
+
+@media screen and (max-width: 675px) {
+    .bloc-texte {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .post {
+        width: 92%;
+    }   
+    
+    .post .video {
+        flex-direction: column;
+        & video {
+            width: 80%;
+        }
+    }
+}
+

@@ -1,0 +1,84 @@
+@import "../../variables.scss";
+
+* {
+    font-family: 'GothamLight';
+}
+
+footer {
+  padding: 15px;
+  background: $bleu_footer;
+}
+
+.infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.infos > div {
+  width: 25%;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+    color: $bleu;
+}
+
+h2 {
+  font-size:16px;
+  color: $gris_clair;
+  margin: 7px 0px;
+}
+
+.bouton {
+    color: $gris_clair;
+    cursor: pointer;
+}
+
+.bouton-scroll {
+  cursor: pointer;
+  background: $blanc;
+  color: $bleu;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: block;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 720px) {
+  .infos {
+    flex-direction: column;
+  }
+  .infos > div {
+    width: 90%;
+    margin: 15px 0px;
+  }
+
+}
+
+
+
+
+
+.plus-details > div {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background: $bleu_footer url("../../assets/images/motif.png") repeat;
+    overflow-x: hidden;
+    transition: 0.2s;
+    color: $blanc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

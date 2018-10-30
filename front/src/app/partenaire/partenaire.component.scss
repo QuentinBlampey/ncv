@@ -1,0 +1,45 @@
+@import "../../variables.scss";
+
+.bloc-all {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px auto;
+    min-height: 100px;
+    width: 80%;
+    align-items: center;
+}
+
+img {
+    min-width: 200px;
+    max-width: 200px;
+    width: 100%;
+    height: 100%;
+    height: auto;
+}
+
+.separateur {
+    width: 200px;
+}
+
+bloc-texte {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: "GothamLight";
+    font-size: 35px;
+    margin: 0px;
+}
+
+p {
+    font-size: 15px;
+    font-family: "GothamLight";
+}
+
+@media screen and (max-width: 675px) {
+   .bloc-all {
+        flex-direction: column;
+    }
+}

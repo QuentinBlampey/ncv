@@ -1,0 +1,24 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+<footer>
+    <button class="bouton-scroll" (click)="scrollPageTop()"><i class="fa fa-arrow-up"></i></button>
+    <div class="infos">
+            <div>
+                    <h2>Nous contacter</h2>
+                    <a href="mailto:nuitcentraleverticale@gmail.com">nuitcentraleverticale@gmail.com</a>
+                </div>
+                
+                <div>
+                    <h2>Nous trouver</h2>
+                    
+                    <a href="https://www.google.fr/maps/dir//3+Rue+Joliot+Curie,+91190+Gif-sur-Yvette/@48.7088515,2.0939664,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47e67f5ab2295b95:0x12eabc8deefcf345!2m2!1d2.1640062!2d48.7087594!3e0?hl=fr">3 rue Joliot Curie, 91190 Gif-sur-Yvette</a>
+                    <span class="bouton" [routerLink]="'plus-detail'" style="cursor:pointer"> Plus de détails </span>
+                    
+                </div>
+                
+                <div>
+                    <h2>Nous suivre</h2>
+                    <app-reseaux-sociaux></app-reseaux-sociaux>
+                </div>
+    </div>
+</footer>

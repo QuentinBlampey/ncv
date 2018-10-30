@@ -1,0 +1,307 @@
+@import "../../variables.scss";
+
+
+nav {
+  height: 50px;
+  background: $bleu_header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.gauche img {
+  height: 36px;
+  width: auto;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.droite {
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      & .inscription {
+            background: $bleu;
+            height: 30px;
+            width: 110px;
+            border-radius: 15px;
+            color: $blanc;
+            display: block;
+            text-align: center;
+            padding-top: 6px;
+
+          &:hover {
+                background: $blanc;
+                color: $bleu;
+            }
+      }
+
+      & .bouton:hover {
+        background: $bleu_clair;
+      }
+
+      & .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+        margin-right: 15px;
+
+        & > * {
+            margin: 0px 6px;
+        }
+      }
+
+      & a {
+        color: $blanc;
+        float: left;  
+
+          &:hover {
+            color: $bleu;
+            transition: color 0.4s ease-in;
+          }
+      }
+
+      & .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      & .dropbtn {
+        cursor: pointer;   
+        border: none;
+        outline: none;
+        color: $blanc;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      & .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus , i {
+        color: $bleu;
+      }
+
+      & .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: $blanc;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+          & a {
+            float: none;
+            color: $gris_fonce;
+            padding: 12px 16px;
+            font-family: "GothamBook";
+            text-decoration: none;
+            display: block;
+            text-align: left;
+              &:hover {
+                background-color: $gris_clair;
+                color: $gris_fonce;
+              }
+          }
+      } 
+
+      & .show {
+        display: block;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.droite-small {
+    
+    & .close {
+        position: absolute;
+        left: 0px;
+        top:60px;
+        height: 2000px;
+        width: 0%;
+        z-index: 1;
+    }
+    
+    & .bloc-reseaux {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        height: 60px;
+        background: rgb(28,28,45);
+        & * {
+            margin: auto;
+            padding-top: 7px;
+        }
+    }
+    
+    & .open-nav {
+        width: 20px;
+        height: 20px;
+        margin-right:15px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & div {
+            width: 100%;
+            height: 2px;
+            background: $blanc;
+        }
+    }
+
+    & .separateur {
+        margin: 1vh 0;
+        height: 1px;
+        width: 60%;
+        background: $gris_clair;
+    }
+    
+    & .menu {
+        flex-direction: column;
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 3vh;
+    }
+    
+    & .inscription {
+        color: $bleu;
+        width: 70%;
+        height: 5vh;
+        margin: 2vh auto;
+        font-size: 3vh;
+        background: $blanc;
+        border-radius: 2.5vh;
+        display: flex;
+        justify-content: center;
+        padding-top: 0.5vh;
+    }
+    
+    & #myNav {
+        overflow-y: hidden;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        right: 0;
+        background: $bleu_footer url("../../assets/images/motif.png") repeat;
+        overflow-x: hidden;
+        transition: 0.2s;
+        color: $blanc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    & a {
+        padding: 1.5vh 0px;
+        text-decoration: none;
+        font-size: 3vh;
+        display: block;
+        transition: 0.3s;
+        color: $blanc;
+        
+        &:hover,:focus {
+            color: $bleu;
+        }   
+    }
+    
+    & .overlay-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: "GothamBook";
+        position: relative;
+        
+        & img {
+            width: 3%;
+            height: 3px;
+        }
+        
+        & > div {
+            display: flex;
+        }
+    }
+}
+
+
+@media screen and (max-height: 350px) {
+  .droite-small {
+      & .closebtn {
+        font-size: 40px;
+      }
+
+      & a {
+          font-size: 15px;
+          margin: 3.5px 0px;
+          padding: 0px;
+      }
+
+      & .inscription {
+          font-size: 6vh;
+            height: 10vh;
+            margin: 2vh auto;
+            border-radius: 5vh;
+            padding-top: 1vh;
+            transform: translate(0%,100%);
+      }
+
+      & .menu {
+          flex-wrap: nowrap;
+      }
+
+      & #myNav {
+          overflow: scroll;
+      }
+
+      & .bloc-reseaux {
+          bottom: -100px;
+          height: 60px;
+      }
+  }
+}
+
+
+
+
+
+
+.sous-nav {
+  height: 50px;
+}

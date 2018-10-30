@@ -1,0 +1,82 @@
+@import "../../variables.scss";
+
+.bloc-all {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+    justify-content: center;
+}
+
+h1 , h2 {
+    margin: 0px auto;
+    font-family: "GothamLight";
+
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 30px;
+    max-width: 90%;
+    text-align: center;
+}
+
+h2 {
+    width: 80%;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom:40px;
+    font-size: 20px;
+    color: $gris;
+}
+
+.bloc-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    & img {
+        width: 25%;
+        height: 100%;
+        border-radius: 6px;
+        margin: 1vw;
+    }
+}
+
+@supports (-moz-appearance:none) {
+    .bloc-images img {
+        height: auto;
+    }  
+}
+
+@media screen and (max-width: 1023px) {
+   .bloc-images img {
+        width: 38%;
+        height: 100%;
+    }
+
+    @supports (-moz-appearance:none) {
+        .bloc-images img {
+            height: auto;
+        }  
+    }
+    
+}
+
+@media screen and (max-width: 675px) {
+  .bloc-images {
+    flex-direction: column;
+      & img {
+          width: 80%;
+          margin: 10px auto;
+      }
+  }
+    
+  
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,34 @@
+@import "../../variables.scss";
+
+i.fa {
+  font-size: 1.7rem;
+  color: #fefefe;
+}
+
+i.fa:hover {
+  color: rgb(27,117,188);
+  transition: color 0.2s ease-in;
+}
+
+
+a:hover  ,  a:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  transition: all 0.4s ease;
+}

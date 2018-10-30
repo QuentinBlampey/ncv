@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<nav>
+
+
+  <div class="gauche">
+    <a routerLink=""> <img src="../../assets/images/logo_ncv_blanc.png" alt="logo ncv blanc" /> </a>
+  </div>
+
+
+
+  <div class="droite         hide-for-medium-only    hide-for-small-only">
+    
+    <div class="navbar">
+        <a routerLink="">Accueil</a>
+        
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction1()">Nos évènements
+                <i class="fa fa-caret-down"></i> 
+            </button>
+            <div class="dropdown-content" id="myDropdown1">
+                <a routerLink="ncv">Nuit Centrale Verticale</a>
+                <a routerLink="cvg">Centrale Vertical Games</a>
+                <a routerLink="vt">Vertical Team</a>
+            </div>
+         </div>
+        <a routerLink="news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction2()">Editions précédentes
+                <i class="fa fa-caret-down"></i> 
+            </button>
+            <div class="dropdown-content" id="myDropdown2">
+                <a routerLink="galerie">Galerie</a>
+                <a routerLink="classements">Classements</a>
+            </div>
+         </div>
+         <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction3()">L'association
+                <i class="fa fa-caret-down"></i> 
+            </button>
+            <div class="dropdown-content" id="myDropdown3">
+                <a routerLink="nos-partenaires">Nos partenaires</a>
+                <a href="../../assets/devenirpartenaire.pdf" onclick="window.open(this.href); return false;">Devenir partenaire</a>
+            </div>
+         </div>
+         <a routerLink="inscription" class="inscription">Je m'inscris</a>
+    </div>
+
+    <app-reseaux-sociaux></app-reseaux-sociaux>
+
+  </div>
+
+
+
+  <div class="droite-small          hide-for-large">
+      
+    <div id="myNav">
+        <div class="overlay-content">
+
+            <div class="menu">
+                <a routerLink="" onclick="closeNav()">Accueil</a>
+                <a routerLink="news" onclick="closeNav()">News</a>
+                <div class="separateur"></div>
+                <a routerLink="ncv" onclick="closeNav()">Nuit Centrale Verticale</a>
+                <a routerLink="cvg" onclick="closeNav()">Centrale Vertical Games</a>
+                <a routerLink="vt" onclick="closeNav()">Vertical Team</a>
+                <div class="separateur"></div>
+                <a routerLink="galerie" onclick="closeNav()">Galerie</a>
+                <a routerLink="classements" onclick="closeNav()">Classements</a>
+                <div class="separateur"></div>
+                <a routerLink="nos-partenaires" onclick="closeNav()">Nos partenaires</a>
+                <a href="../../assets/devenirpartenaire.pdf" onclick="closeNav(); window.open(this.href); return false;">Devenir partenaire</a>
+            </div>
+
+
+            <a routerLink="inscription" class="inscription" onclick="closeNav()">Je m'inscris</a>
+
+            <div class="bloc-reseaux">
+                <app-reseaux-sociaux></app-reseaux-sociaux>
+            </div>
+
+      </div>
+    </div>
+
+    <div class="close" id="close" onclick="closeNav()"></div> <!--  Div transparente pour fermer nav si clique en dehors !-->
+    <div class="open-nav" onclick="openNav()" > <div></div> <div></div> <div></div> </div>
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <span onclick="openNav()"></span>
+
+  </div>
+
+
+</nav>
+
+<div class="sous-nav"></div>

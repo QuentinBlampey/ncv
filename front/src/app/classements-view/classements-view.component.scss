@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+th {
+    font-family: "GothamBook";
+}
+
+td {
+    font-family: "GothamLight";
+}
+
+table {
+    width: 70%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 675px) {
+  table {
+    width: 95%;
+  }
+}
+
+.finaliste {
+    color: rgb(0,150,50);
+    font-size: 14px;
+}

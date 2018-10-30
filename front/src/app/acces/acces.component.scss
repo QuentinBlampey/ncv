@@ -1,0 +1,70 @@
+@import "../../variables.scss";
+
+
+.bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.bloc > div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h1 , h2 {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+}
+
+p {
+    font-size: 15px;
+}
+
+a {
+    margin: 0px;
+    padding: 0px;
+    color: $bleu;
+}
+
+img {
+    width: 60%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.bloc-transport {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explication {
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 675px) {
+    img {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

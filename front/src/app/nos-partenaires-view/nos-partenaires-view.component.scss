@@ -1,0 +1,9 @@
+@import "../../variables.scss";
+
+.separateur {
+    height: 2px;
+    width: 80%;
+    margin: auto;
+    background: $gris_clair;
+    border-radius: 1px;
+}

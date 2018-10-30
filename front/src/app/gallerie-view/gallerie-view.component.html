@@ -1,0 +1,11 @@
+<app-banniere-titre [titre]="'Galerie Photos'"></app-banniere-titre>
+
+<app-choix-edition (pressedButton)= "filtreschange($event)"></app-choix-edition>
+
+<div class="galerie">
+    <img *ngFor="let image of sortedGalerie" [src]="image.src" alt="photo evenement" (click)="afficherGrand(image.src)" />
+    <div class="grand" *ngIf = "affiche">
+        <div class="desaffiche" (click)=" affiche = false "></div>
+        <img [src]="src_grand" alt="photo evenement"/>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+@import "../../variables.scss";
+
+h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.bloc {
+    width: 70%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 675px) {
+  .bloc {
+    width: 95%;
+  }
+}
+
+* {
+    font-family: "GothamLight";
+}
+
+.ligne {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+
+.sexe-edition {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+  background: $gris_fonce;
+  color: $blanc;
+  margin: 0px 0.5px;
+  -webkit-flex: 1 0 0;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  
+  &.is-active {
+      background: $bleu;
+    }
+
+  &:hover {
+        background: $gris_clair;
+    }
+}
+
+.select , .button {
+    position: relative;
+    z-index: 2;
+}

@@ -1,0 +1,35 @@
+<h2> Veuillez choisir une édition d'un de nos évènements :</h2>
+
+<div class="bloc">
+    <h3>Catégorie</h3>
+    <div class="ligne edition">
+        <button class="button" (click)="onPressedButtonEvent('ncv_b') " [ngStyle]=" selectedEvent == 'ncv_b' ? {'background-color': getColor()} : {} ">Nuit Centrale Verticale - Bloc </button>
+        <button class="button" (click)="onPressedButtonEvent('ncv_v') " [ngStyle]=" selectedEvent == 'ncv_v' ? {'background-color': getColor()} : {} ">Nuit Centrale Verticale - Voie </button>
+        <button class="button" (click)="onPressedButtonEvent('cvg') " [ngStyle]=" selectedEvent == 'cvg' ? {'background-color': getColor()} : {} ">Centrale Verticale Games</button>
+    </div>
+    
+    <h3 *ngIf="url=='/classements'">Sexe</h3>
+    
+    <div class="ligne sexe" *ngIf="url=='/classements'">
+        <button class="button" (click)="onPressedButtonSexe('H')" [ngStyle]=" selectedSexe == 'H' ? {'background-color': getColor()} : {} ">Hommes</button>
+        <button class="button" (click)="onPressedButtonSexe('F')" [ngStyle]=" selectedSexe == 'F' ? {'background-color': getColor()} : {} ">Femmes</button>
+    </div>
+    
+    <h3 *ngIf="url=='/galerie'">Phase</h3>
+        
+    <div class="ligne phase" *ngIf="url=='/galerie'">
+        <button class="button" (click)="onPressedButtonPhase('finales') " [ngStyle]=" selectedPhase == 'finales' ? {'background-color': getColor()} : {} ">Finales</button>
+        <button class="button" (click)="onPressedButtonPhase('qualifications') " [ngStyle]=" selectedPhase == 'qualifications' ? {'background-color': getColor()} : {} ">Qualifications</button>
+    </div>
+    
+    <h3>Année</h3>
+    
+    <div class="ligne annee">
+        <select [(ngModel)] = selectedYear (ngModelChange) = "onPressedButtonYear()" class="ligne" name="select">
+            <option value="2017">2017</option>
+            <option *ngIf="url=='/classements'" value="2016">2016</option>
+            <option *ngIf="url=='/classements'" value="2015">2015</option>
+        </select>
+    </div>
+    
+</div>

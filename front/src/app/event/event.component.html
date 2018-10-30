@@ -1,0 +1,30 @@
+<div class="bloc-event">
+   <div class="bloc-pres">
+      <img [src]="event.logoUrl" alt="Logo avec un degrade" class="logo-event" />
+
+      <div class="bloc-texte">
+            <h2><span [ngStyle] = "{ 'color' : event.couleur1}" >{{ event.nom }}</span>
+                <span [ngStyle] = "{ 'color' : event.couleur2}">.</span>
+            </h2>
+      
+            <h3> {{ event.soustitre1 }} <span [ngStyle] = "{ 'color' : event.couleur1}" >{{ event.soustitre2 }}</span> {{ event.soustitre3 }} <span [ngStyle] = "{ 'color' : event.couleur2}" >  {{ event.soustitre4 }} </span> {{ event.soustitre5 }} 
+            </h3>
+       
+            <p class="description"> {{ event.description }} </p>
+    
+            <div class="boutons">
+                <a class="bouton" (mouseover)="hover=true" (mouseleave)="hover=false" [routerLink]="lien" [ngStyle] = " hover ? { 'background-color': event.couleur2 , 'border': event.couleur2, 'color': event.couleurHover } : { 'color':event.couleur2 } " (click)="scrollPage(1000)"> {{ texte }} </a>
+                <a *ngIf="event.nom != 'Vertical Team'" class="bouton" (mouseover)="hover2=true" (mouseleave)="hover2=false" [routerLink]="'../inscription'" [ngStyle] = " hover2 ? { 'background-color': event.couleur2 , 'border': event.couleur2 , 'color': event.couleurHover } : { 'color':event.couleur2 } "> Je m'inscris </a>
+                <a *ngIf="event.nom == 'Vertical Team'" class="bouton" (mouseover)="hover2=true" (mouseleave)="hover2=false" href="mailto:nuitcentraleverticale@gmail.com" [ngStyle] = " hover2 ? { 'background-color': event.couleur2 , 'border': event.couleur2 , 'color': event.couleurHover } : { 'color':event.couleur2 } "> Nous contacter </a>
+            </div>
+     </div>
+   </div>
+       
+   <div class="hero-section" [ngStyle] = "{ 'background' : event.background , 'background-size': 'cover'}">
+      <div class="hero-section-text">
+         <h1> {{ event.accroche }} </h1>
+      </div>
+      <img src="../../assets/images/transition_gris.png" alt="separateur_gris" class="separateur-gris" />
+       <div class="triangle"></div>
+   </div>
+</div>

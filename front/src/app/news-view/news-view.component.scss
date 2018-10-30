@@ -1,0 +1,14 @@
+@import "../../variables.scss";
+
+.bouton {
+    color : $bleu;
+    border-color: $bleu;
+    text-align: center;
+    width: 250px;
+    margin: auto;
+    margin-top: 30px;
+    &:hover {
+        background: $bleu;
+        color: $blanc;
+    }
+}

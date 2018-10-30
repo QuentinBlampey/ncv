@@ -1,0 +1,10 @@
+<div class="bloc-all" [ngStyle] = " inverse ? { 'background-color': fond } : { } ">
+    
+    <h1 [ngStyle] = " inverse ? { 'color': '#fefefe' } : { } " > {{ contenu.titre }} </h1>
+    <h2 [ngStyle] = " inverse ? { 'color': '#bcbcbc' } : { } "> {{ contenu.description }}</h2>
+
+    <div class="bloc-images">
+        <img *ngFor="let image of contenu.images" [src]="image" alt="image" />
+    </div>
+    
+</div>

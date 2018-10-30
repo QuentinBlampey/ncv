@@ -1,0 +1,53 @@
+<div class="menu">
+  <h2> Connection </h2>
+  <h2> News </h2>
+  <h2> Classements </h2>
+  <h2> Inscriptions </h2>
+</div>
+
+<div class="bloc">
+  <h2 *ngIf="connecte"> Vous êtes connecté</h2>
+  <h2 *ngIf="!connecte"> Vous n'êtes pas connecté</h2>
+  <div class="code">
+    <input type="text" class="form-control" [(ngModel)]="code">
+    <div class="bouton" (click)=changeConnecte()> Entrer </div>
+  </div>
+
+  <div *ngIf="connecte">
+    <h3> Nom </h3>
+    <input type="text" class="form-control" [(ngModel)]="nom">
+    <h3> Prenom </h3>
+    <input type="text" class="form-control" [(ngModel)]="prenom">
+    <h3> Sexe (H/F) </h3>
+    <input type="text" class="form-control" [(ngModel)]="sexe">
+    <h3> Phase ( finales / qualifications )</h3>
+    <input type="text" class="form-control" [(ngModel)]="phase">
+    <h3> Rang </h3>
+    <input type="text" class="form-control" [(ngModel)]="rang">
+    <h3> Event (ncv_b / ncv_v / cvg) </h3>
+    <input type="text" class="form-control" [(ngModel)]="event">
+    <h3> Annee </h3>
+    <input type="text" class="form-control" [(ngModel)]="annee">
+    <div class="bouton" (click)=entrerBDD()> Entrer </div>
+
+    <table>
+        <thead>
+          <tr>
+            <th width="100">Rang</th>
+            <th>Nom</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+              *ngFor="let classement of classements | sort : 'rang'">
+            <td>{{classement.rang}}</td>
+            <td>{{classement.nom}} {{classement.prenom}}</td>
+            <td class="finaliste"> {{ getFinalistes(classement)}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+
+</div>

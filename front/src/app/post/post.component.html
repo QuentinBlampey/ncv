@@ -1,0 +1,36 @@
+<div class="post">
+    <div class="slideshow-container">
+        <div>
+            <div class="mySlides fade premiere" id="premiere">
+                <img [src]="contenu.image" style="width:100%">
+            </div>
+            <!--
+            <div class="mySlides fade" *ngFor="let src of contenu.images">
+                <img [src]="src" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+        </div>
+            
+        <!-- 
+        <div class="dots hide-for-small-only" style="text-align:center">
+            <span class="dot" id="premier"></span> 
+            <span class="dot" *ngFor="let src of contenu.images"></span> 
+        </div> -->
+    </div>
+
+    <div class="bloc-texte">
+        <h1> {{ contenu.titre }} </h1>
+        <h3>Le {{ contenu.date }}</h3>
+        <p> {{ contenu.description }}  </p>
+    </div>
+    
+    <div *ngIf = "contenu.videos != [] " class="video">
+        <video width="800" controls *ngFor = "let video of contenu.videos">
+          <source [src]="video" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+    </div>
+    
+</div>

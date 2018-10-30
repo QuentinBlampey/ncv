@@ -1,0 +1,17 @@
+<app-banniere-titre [titre]="'Inscription'"></app-banniere-titre>
+
+<h3> Cette année la NCV et les CVG auront lieu le <span>24 et 25 Novembre 2018</span> respectivement !</h3>
+
+<div class="pricing">
+    <div>
+        <app-prix  [prix]="'15'" [logos]="[ '../../assets/images/logo_ncv_bleu.png' ]" [offres]="[ 'Inscription à la Nuit Centrale Verticale' , 'Un t-shirt avec le logo de l’édition' , 'Un écocup aux couleurs de la NCV' , 'Deux sandwichs pour le repas' , 'Une consommation pour l’After grimpe au bar de l’école']"></app-prix>
+        <app-prix  [prix]="'25'" [logos]="[ '../../assets/images/logo_ncv_bleu.png' , '../../assets/images/logo_cvg_orange.png' ]" [offres]="[ 'Inscription à la Nuit Centrale Verticale et aux Centrale Vertical Games' , 'Les t-shirts de chaque compétition' , 'Un écocup NCV et une gourde CVG' , 'Deux sandwichs pour le repas chaque jour' , 'Une consommation pour l’After
+        grimpe au bar de l’école']"></app-prix>
+        <app-prix  [prix]="'15'" [logos]="[ '../../assets/images/logo_cvg_orange.png' ]" [offres]="[ 'Inscription aux Centrale Vertical Games' , 'Un t-shirt avec le logo de l’édition' , 'Une gourde aux couleurs des CVG' , 'Deux sandwichs pour le repas']"></app-prix>
+    </div>
+</div>
+<h3> Les inscriptions sont ouvertes, <span>inscrivez-vous vite !</span></h3>
+
+<div class="bouton-rectangle">
+    <a href="http://ncv.campus.ecp.fr/web/inscriptions/accueil.php" onclick="window.open(this.href); return false;"> Remplir le formulaire</a>
+</div>

@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.banniere {
+    height: 17vh;
+    min-height: 60px;
+    width: 100%;
+    background-image: linear-gradient(170deg , rgba(38,34,98,0) , rgb(193,61,123) ) , linear-gradient(190deg , rgb(27,117,188) , rgba(88,34,98,0) ) , linear-gradient(55deg , rgb(38,28,92) , rgb(27,117,188) )  ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h1 {
+    color: $blanc;
+    font-size: 8vh;
+    padding: 13vh 0px 5vh 10px;
+    font-family: "GothamBold";
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@media screen and (max-height: 1000px) {
+    h1 {
+        font-size: 7vh;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    h1 {
+        font-size: 6vh;
+    }
+}

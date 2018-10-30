@@ -1,0 +1,64 @@
+.bloc {
+    width: 300px;
+    height: 585px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+}
+
+.prix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h1 {
+        font-size: 80px;
+        font-family: 'GothamThin';
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px 10px 0px 10px;
+    & img {
+        width: 35%;
+        height: 100%;
+    }
+}
+
+li {
+    font-family: 'GothamLight';
+    list-style: none;
+    margin-bottom: 10px;
+    text-align: justify;
+    margin-right: 35px;
+    & img {
+        width: 15px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .bloc {
+        width: 240px;
+        height: 650px;
+    }
+    
+    li {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .bloc {
+        width: 260px;
+        height: 605px;
+    }
+    
+    li {
+        text-align: justify;
+    }
+}
